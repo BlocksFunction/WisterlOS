@@ -4,9 +4,9 @@ void CHlt(void);
 
 int FBlock() {
   cls();
-  printf("I can't");
-//  printf("How Are You?");
-//  printf("I Fine, Thanks. And You?");
+  printf("Welcome to use WisterlOS");
+  printf("This a DOS System");
+  // ????????????
   CHlt();
   return 0;
 }
