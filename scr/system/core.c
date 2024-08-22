@@ -11,6 +11,7 @@ int FBlock() {
   printf("Developer:\n", 0x17);
   printf("    BlocksFunction\n", 0x17);
   printf("---------------------------\n", 0x17);
+  printf("Enter \"B\" to login\n", 0x17);
   CHlt();
   return 0;
 }
