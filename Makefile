@@ -16,8 +16,8 @@
 	ld -T ./scr/othertool/link.ld -m elf_i386 -nostdlib ./build/boot.o ./build/core.o ./build/screen.o ./build/asmfunc.o -o ./iso/boot/sys.bin
 
 ./test.img:	./iso/boot/sys.bin
-	grub-mkrescue -o ./test.img ./iso
-	qemu-system-i386 ./test.img
+	grub-mkrescue -o ./test.iso ./iso
+	qemu-system-i386 ./test.iso
 	rm ./build/*.*
 	rm ./iso/boot/sys.bin
-	rm ./test.img
+	rm ./test.iso

@@ -11,10 +11,16 @@ void cls() {
 }
 
 void printf(const char *text) {
-  for (; '\0' != *text;) {
-    displayBuf[i++] = *(text++);
-    displayBuf[i++] = 0x03;
-  }
-  // i += 80 - (80 - i);
-}
 
+  for (int now = 0; '\0' != *text;) {
+    if (*text == '\n')
+    {
+      i += 160 - now * 2;
+      text++;
+    } else {
+      displayBuf[i++] = *(text++);
+      displayBuf[i++] = 0x03;
+      now++;
+    }
+  }
+}
