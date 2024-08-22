@@ -1,17 +1,15 @@
 char *displayBuf = (char *)0xb8000;
 unsigned int i = 0;
 
-void cls() {
+void cls(char color) {
   const unsigned int total = 80 * 25 * 2;
   while (i < total) {
     displayBuf[i++] = ' ';
-    displayBuf[i++] = 0x04;
+    displayBuf[i++] = color;
   }
   i = 0;
 }
-
-void printf(const char *text) {
-
+void printf(const char *text, char color) {
   for (int now = 0; '\0' != *text;) {
     if (*text == '\n')
     {
@@ -19,7 +17,7 @@ void printf(const char *text) {
       text++;
     } else {
       displayBuf[i++] = *(text++);
-      displayBuf[i++] = 0x03;
+      displayBuf[i++] = color;
       now++;
     }
   }

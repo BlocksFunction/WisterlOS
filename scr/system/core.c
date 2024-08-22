@@ -1,10 +1,16 @@
-void printf(const char *text);
-void cls();
+void printf(const char *text, char color);
+void cls(char color);
 void CHlt(void);
 
+char Username[15];
+
 int FBlock() {
-  cls();
-  printf("Hello World\n");
+  cls(0x17);
+  printf("Wisterl System is Loaded\n", 0x17);
+  printf("--------------------------\n", 0x17);
+  printf("Developer:\n", 0x17);
+  printf("    BlocksFunction\n", 0x17);
+  printf("---------------------------\n", 0x17);
   CHlt();
   return 0;
 }
