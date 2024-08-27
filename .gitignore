@@ -53,3 +53,8 @@ dkms.conf
 
 ./iso/boot/sys.bin
 ./test.img
+.vscode/c_cpp_properties.json
+.vscode/launch.json
+.gitignore
+.vscode/settings.json
+.gitignore

@@ -1,6 +1,7 @@
 void printf(const char *text, char color);
 void cls(char color);
 void CHlt(void);
+void ErrorScreen(char *ErrorInfo, char *ErrorCode);
 
 char Username[15];
 

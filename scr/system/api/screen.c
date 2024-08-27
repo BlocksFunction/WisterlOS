@@ -22,3 +22,20 @@ void printf(const char *text, char color) {
     }
   }
 }
+
+void ErrorScreen(char* ErrorInfo, char* ErrorCode)
+{
+    cls(0x47);
+    cls(0x47);
+    cls(0x47);
+    cls(0x47);
+    printf("Chat: the_spectre was killed by Error\n", 0x47);
+    printf("Now, Best method is reboot of brain\n", 0x47);
+    printf("Good Luck\n", 0x47);
+    printf("Error By: ", 0x47);
+    printf(ErrorInfo, 0x47);
+    printf(" && ", 0x47);
+    printf(ErrorCode, 0x47);
+    cls(0x47);
+    printf("\n", 0x47);
+}
